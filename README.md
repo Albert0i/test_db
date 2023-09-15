@@ -4,6 +4,7 @@
 
 ### Prologue
 
+
 ### I. Introduction
 If you opt to use [NodeJS](https://nodejs.org/en) related technique and [Relational database](https://www.oracle.com/in/database/what-is-a-relational-database/), [prisma](https://www.prisma.io/) seems an obviously choice, if it were not the only choice... 
 
@@ -18,10 +19,13 @@ In case of 1 and 2, I recommend [MongoDB](https://www.mongodb.com/) and [mongoos
 In case of 3 and 4, I recommend not to use ODM at all. Use [MySQL 2](https://www.npmjs.com/package/mysql2), [pg](https://www.npmjs.com/package/pg), [oracledb](https://www.npmjs.com/package/oracledb), [mssql](https://www.npmjs.com/package/mssql) and [better-sqlite3](https://www.npmjs.com/package/better-sqlite3) packages respectively. 
 
 
-### II. Summary 
+### II. The Journey
 
 
-### III. Reference
+### III. Summary 
+
+
+### IV. Reference
 1. [Comparing Prisma and Mongoose for MongoDB: A Comprehensive Analysis
 ](https://levelup.gitconnected.com/comparing-prisma-and-mongoose-for-mongodb-a-comprehensive-analysis-531c656fc118
 )
