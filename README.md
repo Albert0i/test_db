@@ -21,7 +21,7 @@ In case of 1 and 2, I recommend [MongoDB](https://www.mongodb.com/) and [mongoos
 
 In case of 3 and 4, I recommend not to use ODM at all. Use [MySQL 2](https://www.npmjs.com/package/mysql2), [pg](https://www.npmjs.com/package/pg), [oracledb](https://www.npmjs.com/package/oracledb), [mssql](https://www.npmjs.com/package/mssql) and [better-sqlite3](https://www.npmjs.com/package/better-sqlite3) packages respectively. 
 
-You if think there exists a tool fits for everything, I will give you a lollipop. 
+If you if think there exists a tool fits for everything, I will give you a lollipop. 
 
 
 ### II. The Journey
