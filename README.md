@@ -3,9 +3,9 @@
 ![alt ](img/melontaTauta-667x1024.jpg)
 
 ### Prologue
-Coincidence! There is no such thing as coincidence and I don't think it ever exists in real life... Everything happens according to a devised plan, I mean HIS plan. Have you ever think of an old friend and later on you encounter him/her. Missing a bus but that recall you that there's no tea at home, your shrew wife definitely grows furious if you ever forgot it. 
+Coincidence! There is no such thing as coincidence and I don't think it ever exists in real life... Everything happens according to a devised plan, I mean HIS plan. Have you ever think of an old friend and later on you encounter him/her. Missing a bus but that recalls you that there's no tea at home, your shrew wife definitely grows furious if you ever forgot it. 
 
-Next time when something hits you unexpectedly, it is HE who gives you a chance to console or compensate. Help or be helped is much the same thing. 
+Next time when something hits on you unexpectedly, it is HE who gives you a chance to console or compensate. Help or be helped is much the same thing. 
 
 
 ### I. Introduction
@@ -21,11 +21,12 @@ In case of 1 and 2, I recommend [MongoDB](https://www.mongodb.com/) and [mongoos
 
 In case of 3 and 4, I recommend not to use ODM at all. Use [MySQL 2](https://www.npmjs.com/package/mysql2), [pg](https://www.npmjs.com/package/pg), [oracledb](https://www.npmjs.com/package/oracledb), [mssql](https://www.npmjs.com/package/mssql) and [better-sqlite3](https://www.npmjs.com/package/better-sqlite3) packages respectively. 
 
-You if think that there exists a tool fits for everything, I will give you a lollipop. 
+You if think there exists a tool fits for everything, I will give you a lollipop. 
 
 
 ### II. The Journey
-
+```
+```
 
 ### III. Summary 
 
