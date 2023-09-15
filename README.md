@@ -1,6 +1,6 @@
 ### test_db ── An Imaginary Journey
 
-![alt ](img/melontaTauta-667x1024.jpg)
+![alt Mellonta Tauta](img/melontaTauta-667x1024.jpg)
 
 ### Prologue
 Coincidence! There is no such thing as coincidence and I don't think it ever exists in real life... Everything happens according to a devised plan, I mean HIS plan. Have you ever think of an old friend and later on you encounter him/her. Missing a bus but that recalls you that there's no tea at home, your shrew wife definitely grows furious if you ever forgot it. 
@@ -29,11 +29,11 @@ Download [test_db](https://github.com/datacharmer/test_db) and restore to local 
 
 > The database contains about 300,000 employee records with 2.8 million salary entries. The export data is 167 MB, which is not huge, but heavy enough to be non-trivial for testing.
 
-![alt employees](img/employees.png)
+![alt employees schema](img/employees.png)
 
 ![alt mysql803](img/mysql803.JPG)
 
-Pull the schema from an existing database, updating the Prisma schema
+Initialize and pull the schema from an existing database. 
 
 ![alt prisma-db-pull](img/prisma-db-pull-dev.JPG)
 
