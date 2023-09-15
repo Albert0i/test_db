@@ -1,35 +1,37 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+### test_db ── An Imaginary Journey
 
-## Getting Started
+![alt ](img/melontaTauta-667x1024.jpg)
 
-First, run the development server:
+### Prologue
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+### I. Introduction
+If you opt to use [NodeJS](https://nodejs.org/en) related technique and [Relational database](https://www.oracle.com/in/database/what-is-a-relational-database/), [prisma](https://www.prisma.io/) seems an obviously choice, if it were not the only choice... 
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+But [ORM](https://www.freecodecamp.org/news/what-is-an-orm-the-meaning-of-object-relational-mapping-database-tools/) may not be good for: 
+1. Loose database schema 
+2. Fast schema evolving 
+3. System with complex query 
+4. Flexible table joining 
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+In case of 1 and 2, I recommend [MongoDB](https://www.mongodb.com/) and [mongoose](https://mongoosejs.com/), which is a mature [ODM](https://www.dctacademy.com/blog/what-is-object-document-mapper-odm) solely for MongoDB. 
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+In case of 3 and 4, I recommend not to use ODM at all. Use [MySQL 2](https://www.npmjs.com/package/mysql2), [pg](https://www.npmjs.com/package/pg), [oracledb](https://www.npmjs.com/package/oracledb), [mssql](https://www.npmjs.com/package/mssql) and [better-sqlite3](https://www.npmjs.com/package/better-sqlite3) packages respectively. 
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+### II. Summary 
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### III. Reference
+1. [Comparing Prisma and Mongoose for MongoDB: A Comprehensive Analysis
+](https://levelup.gitconnected.com/comparing-prisma-and-mongoose-for-mongodb-a-comprehensive-analysis-531c656fc118
+)
+2. [Employees Sample Database](https://dev.mysql.com/doc/employee/en/)
+3. [Prisma cheat sheet](https://github.com/emanuelefavero/prisma)
+4. [Laragon](https://laragon.org/index.html)
+5. [Mellonta Tauta](https://poemuseum.org/mellonta-tauta/)
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Epilogue 
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
-"# test_db" 
+
+### EOF (2023/09/18)

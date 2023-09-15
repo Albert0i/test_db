@@ -12,24 +12,23 @@ prisma.$on('query', (e) => {
 })
 
 async function main() {
-  const dept_emp = await prisma.dept_emp.findMany({     
+  const emp_title = await prisma.employees.findMany({
     where: {
-        dept_no: 'D002'
-    }, 
-    include: {
-        departments: true,
-        employees: {
-          include: {
-            dept_manager: true
-          }
-        }        
+        first_name: 'Martina', 
+        last_name: 'Riesenhuber'
     },
-    orderBy: {
-      from_date: 'desc'
-    },
-    take: 10
+    select: {
+        first_name: true,
+        last_name: true,
+        titles: {
+            orderBy: {
+                from_date: 'desc'
+            },
+            take: 1
+        }
+    }
   })
-  dept_emp.map(rec => console.log(rec))
+  emp_title.map(rec => console.log(rec))
 }
 
 main()
