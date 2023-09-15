@@ -3,9 +3,9 @@
 ![alt Mellonta Tauta](img/melontaTauta-667x1024.jpg)
 
 ### Prologue
-Coincidence! There is no such thing as coincidence and I don't think it ever exists in real life... Everything happens according to a devised plan, I mean HIS plan. Have you ever think of an old friend and later on you encounter him/her unexpectedly on street. Missing a bus but that only recalls you that there's no tea at home, your shrew wife will definitely grow furious if you ever forgot it. 
+Coincidence! There is no such thing as coincidence and I don't think it ever exists in real life... Everything happens according to a devised plan, I mean HIS plan. Have you ever think of an old friend and later on you encounter him/her unexpectedly on street. Missing a bus but that only recalls you that there's no tea at home, your shrew wife will definitely grow furious if you ever forget it. 
 
-Next time when something dawns on you, it is HIM who bestows you a chance to console or compensate. As you can see, help or be helped are the same thing. 
+Next time when something dawns on you, it is HIM who bestows you a chance to console or compensate. As you can see, help and be helped are the same thing. 
 
 
 ### I. Introduction
