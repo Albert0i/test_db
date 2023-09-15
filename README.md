@@ -24,14 +24,29 @@ In case of 3 and 4, I recommend not to use ODM at all. Use [MySQL 2](https://www
 If you think there exists a tool fits for everything, I will give you a lollipop. 
 
 
-### II. The Journey
-```
-```
+### II. Setup 
+Download [test_db](https://github.com/datacharmer/test_db) and restore to local database as described in [`README.md`](https://github.com/datacharmer/test_db/blob/master/README.md). 
 
-### III. Summary 
+> The database contains about 300,000 employee records with 2.8 million salary entries. The export data is 167 MB, which is not huge, but heavy enough to be non-trivial for testing.
+
+![alt employees](img/employees.png)
+
+![alt mysql803](img/mysql803.JPG)
+
+Pull the schema from an existing database, updating the Prisma schema
+
+![alt prisma-db-pull](img/prisma-db-pull-dev.JPG)
+
+Done! 
 
 
-### IV. Reference
+### III. The Journey 
+
+
+## IV. Summary 
+
+
+### V. Reference
 1. [Comparing Prisma and Mongoose for MongoDB: A Comprehensive Analysis
 ](https://levelup.gitconnected.com/comparing-prisma-and-mongoose-for-mongodb-a-comprehensive-analysis-531c656fc118
 )
