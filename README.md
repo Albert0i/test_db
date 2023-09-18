@@ -155,7 +155,7 @@ async function main() {
 
 
 #### Quiz 2:
-```javascript 
+``` 
 async function main() {
   const subordinates = await prisma.employees.findMany({
     where: {
@@ -192,7 +192,7 @@ async function main() {
 
 
 #### Quiz 3:
-```javascript 
+``` 
 async function main() {
   const managers = await prisma.employees.findMany({
     where: {
