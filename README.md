@@ -151,6 +151,8 @@ async function main() {
   emp_title.map(rec => console.log(rec))
 }
 ```
+![alt query1](img/query1.JPG)
+
 
 #### Quiz 2:
 ```javascript 
@@ -186,6 +188,8 @@ async function main() {
   })
 }
 ```
+![alt query2](img/query2.JPG)
+
 
 #### Quiz 3:
 ```javascript 
@@ -222,10 +226,11 @@ async function main() {
   })
 }
 ```
+![alt query3](img/query3.JPG)
 
 
 ### IV. Summary 
-
+Strange! 
 
 ### V. Reference
 1. [Comparing Prisma and Mongoose for MongoDB: A Comprehensive Analysis
