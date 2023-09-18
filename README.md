@@ -236,7 +236,7 @@ Some people consider ORM harmful while others deeply in love with. Personally, I
 
 > The underlying issue I saw oftentimes -- especially in the JavaScript community -- was that people treated ORMs as if they were some kind of 'silver bullet'. I've seen several large influencers on Twitter (mostly those who have only a cursory understanding of databases and SQL) highly praise ORMs for being flexible. 
 
-Having finished [Primsa x Planetscale ── A starter guide](https://github.com/Albert0i/prisma-planetscale/blob/main/README.md) and [The Myth and Riddle of ORM](https://github.com/Albert0i/prisma-planetscale/blob/main/ORM.md), voiced out my opinions, my journey of ORM stops here... for now... 
+Having penned down [Primsa x Planetscale ── A starter guide](https://github.com/Albert0i/prisma-planetscale/blob/main/README.md) and [The Myth and Riddle of ORM](https://github.com/Albert0i/prisma-planetscale/blob/main/ORM.md), voiced out my opinions, my journey of ORM stops here... for now... 
 
 
 ### V. Reference
