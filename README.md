@@ -39,8 +39,189 @@ Initialize and pull the schema from an existing database.
 
 Done! 
 
+prisma/schema.prisma
+```
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model departments {
+  dept_no      String         @id @db.Char(4)
+  dept_name    String         @unique(map: "dept_name") @db.VarChar(40)
+  dept_emp     dept_emp[]
+  dept_manager dept_manager[]
+}
+
+model dept_emp {
+  emp_no      Int
+  dept_no     String      @db.Char(4)
+  from_date   DateTime    @db.Date
+  to_date     DateTime    @db.Date
+
+  employees   employees   @relation(fields: [emp_no], references: [emp_no], onDelete: Cascade, onUpdate: NoAction, map: "dept_emp_ibfk_1")
+  
+  departments departments @relation(fields: [dept_no], references: [dept_no], onDelete: Cascade, onUpdate: NoAction, map: "dept_emp_ibfk_2")
+
+  @@id([emp_no, dept_no])
+  @@index([dept_no], map: "dept_no")
+}
+
+model dept_manager {
+  emp_no      Int
+  dept_no     String      @db.Char(4)
+  from_date   DateTime    @db.Date
+  to_date     DateTime    @db.Date
+
+  employees   employees   @relation(fields: [emp_no], references: [emp_no], onDelete: Cascade, onUpdate: NoAction, map: "dept_manager_ibfk_1")
+  
+  departments departments @relation(fields: [dept_no], references: [dept_no], onDelete: Cascade, onUpdate: NoAction, map: "dept_manager_ibfk_2")
+
+  @@id([emp_no, dept_no])
+  @@index([dept_no], map: "dept_no")
+}
+
+model employees {
+  emp_no       Int              @id
+  birth_date   DateTime         @db.Date
+  first_name   String           @db.VarChar(14)
+  last_name    String           @db.VarChar(16)
+  gender       employees_gender
+  hire_date    DateTime         @db.Date
+
+  dept_emp     dept_emp[]
+  dept_manager dept_manager[]
+  salaries     salaries[]
+  titles       titles[]
+}
+
+model salaries {
+  emp_no    Int
+  salary    Int
+  from_date DateTime  @db.Date
+  to_date   DateTime  @db.Date
+
+  employees employees @relation(fields: [emp_no], references: [emp_no], onDelete: Cascade, onUpdate: NoAction, map: "salaries_ibfk_1")
+
+  @@id([emp_no, from_date])
+}
+
+model titles {
+  emp_no    Int
+  title     String    @db.VarChar(50)
+  from_date DateTime  @db.Date
+  to_date   DateTime? @db.Date
+  
+  employees employees @relation(fields: [emp_no], references: [emp_no], onDelete: Cascade, onUpdate: NoAction, map: "titles_ibfk_1")
+
+  @@id([emp_no, title, from_date])
+}
+
+enum employees_gender {
+  M
+  F
+}
+```
+
 
 ### III. The Journey 
+#### Quiz 1:
+```javascript 
+async function main() {
+  const emp_title = await prisma.employees.findMany({
+    where: {
+        first_name: 'Martina', 
+        last_name: 'Riesenhuber'
+    },
+    select: {
+        first_name: true,
+        last_name: true,
+        titles: {
+            orderBy: {
+                from_date: 'desc'
+            },
+            take: 1
+        }
+    }
+  })
+  emp_title.map(rec => console.log(rec))
+}
+```
+
+#### Quiz 2:
+```javascript 
+async function main() {
+  const subordinates = await prisma.employees.findMany({
+    where: {
+        first_name: 'Arie', 
+        last_name: 'Staelin'
+    },
+    select: {
+        dept_manager: {
+            select: {
+                dept_no: true, 
+                departments: {
+                    select: {
+                        dept_name: true,
+                        dept_emp: {
+                            select: {
+                                        employees: true
+                                    },
+                                },
+                            }
+                        }
+                    }
+                },
+            }
+  })
+  subordinates.map(subordinate => { 
+    console.log('subordinate=', subordinate) 
+    subordinate.dept_manager.map(department => {
+        console.log('subordinate.dept_manager=', department)
+    })    
+  })
+}
+```
+
+#### Quiz 3:
+```javascript 
+async function main() {
+  const managers = await prisma.employees.findMany({
+    where: {
+        first_name: 'Bojan', 
+        last_name: 'Montemayor'
+    },
+    select: {
+        dept_emp: {
+            select: {
+                dept_no: true, 
+                departments: {
+                    select: {
+                        dept_name: true,
+                        dept_manager: {
+                            select: {
+                                        employees: true
+                                    },
+                                },
+                            }
+                        }
+                    }
+                },
+            }
+  })
+  managers.map(manager => { 
+    console.log('manager=', manager) 
+    manager.dept_emp.map(department => {
+        console.log('manager.dept_emp=', department)
+        department.departments.dept_manager.map(d => console.log('dept_manager=', d))
+    })
+  })
+}
+```
 
 
 ### IV. Summary 
@@ -57,6 +238,12 @@ Done!
 
 
 ### Epilogue 
-
+```
+《無題》
+花間抱月入溫柔，
+願醉長臥枕吳鉤，
+人間紛擾多少事，
+一覺睡起已白頭。
+```
 
 ### EOF (2023/09/18)
