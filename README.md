@@ -130,7 +130,7 @@ enum employees_gender {
 
 ### III. The Journey 
 #### Quiz 1:
-```javascript 
+``` 
 async function main() {
   const emp_title = await prisma.employees.findMany({
     where: {
