@@ -230,7 +230,12 @@ async function main() {
 
 
 ### IV. Summary 
-Strange! 
+Some people consider ORM harmful while others deeply in love with. Personally, I like to code in direct SQL but do not against writing trivial CRUD in ORM. 
+
+> In the end, I think ORMs are an nice tool if used appropriately in the correct scenario. Once you balance out the positives and negatives however, it may seem that including an ORM in your stack may not be the best idea once your startup scales. 
+
+> The underlying issue I saw oftentimes -- especially in the JavaScript community -- was that people treated ORMs as if they were some kind of 'silver bullet'. I've seen several large influencers on Twitter (mostly those who have only a cursory understanding of databases and SQL) highly praise ORMs for being flexible. 
+
 
 ### V. Reference
 1. [Comparing Prisma and Mongoose for MongoDB: A Comprehensive Analysis
@@ -239,7 +244,10 @@ Strange!
 2. [Employees Sample Database](https://dev.mysql.com/doc/employee/en/)
 3. [Prisma cheat sheet](https://github.com/emanuelefavero/prisma)
 4. [Laragon](https://laragon.org/index.html)
-5. [Mellonta Tauta](https://poemuseum.org/mellonta-tauta/)
+5. [Why ORMs Aren't Always a Great Idea](https://dev.to/harshhhdev/why-orms-arent-always-a-great-idea-41kg)
+6. [Danger of ORM](https://medium.com/swlh/danger-of-orm-d529d6ce56eb)
+7. [Why ORM is a harmful pattern and should be avoided](https://kurapov.ee/eng/tech/ORM-is-harfmul-pattern/)
+8. [Mellonta Tauta](https://poemuseum.org/mellonta-tauta/)
 
 
 ### Epilogue 
