@@ -129,7 +129,16 @@ enum employees_gender {
 
 
 ### III. The Journey 
-#### Quiz 1:
+#### Quiz 1: Find out the title of employee "Martina Riesenhuber".
+```
+SELECT e.first_name, e.last_name, t.* 
+FROM employees e, titles t
+WHERE e.first_name = 'Martina' AND e.last_name='Riesenhuber' AND  
+	  e.emp_no=t.emp_no 
+ORDER BY t.from_date DESC
+LIMIT 1
+```
+
 ``` 
 async function main() {
   const emp_title = await prisma.employees.findMany({
@@ -154,7 +163,16 @@ async function main() {
 ![alt query1](img/query1.JPG)
 
 
-#### Quiz 2:
+#### Quiz 2: Find out the department name and subordinates of employee "Arie Staelin" and sort by hired date. 
+```
+SELECT d.*, ee.* 
+FROM employees e, dept_manager dm, departments d, dept_emp de, employees ee  
+WHERE e.first_name='Arie' AND e.last_name='Staelin' AND 
+      e.emp_no=dm.emp_no AND dm.dept_no=d.dept_no AND d.dept_no=de.dept_no AND 
+      de.emp_no=ee.emp_no
+ORDER BY ee.hire_date
+```
+
 ``` 
 async function main() {
   const subordinates = await prisma.employees.findMany({
@@ -191,7 +209,17 @@ async function main() {
 ![alt query2](img/query2.JPG)
 
 
-#### Quiz 3:
+#### Quiz 3: Find out the department name and  manager of employee "Bojan Montemayor"
+```
+SELECT d.*, dm.*, em.*  
+FROM employees e, dept_emp de, departments d, dept_manager dm, employees em
+WHERE e.first_name='Bojan' AND e.last_name='Montemayor' AND 
+	  e.emp_no=de.emp_no AND de.dept_no=d.dept_no AND 
+      de.dept_no=dm.dept_no AND dm.emp_no=em.emp_no
+ORDER BY dm.from_date DESC 
+LIMIT 1
+```
+
 ``` 
 async function main() {
   const managers = await prisma.employees.findMany({
@@ -261,4 +289,5 @@ Having penned down [Primsa x Planetscale ── A starter guide](https://github.
 一覺睡起已白頭。
 ```
 
+### Revised on 2024/02/26
 ### EOF (2023/09/18)
